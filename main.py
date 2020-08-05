@@ -17,9 +17,6 @@ class generate():
         threading.Thread.__init__(self)
         self.f = open(self.fileName, "w+")
 
-    #def isIllegal(self, ip):
-
-
 
     async def isPrivateSubnet(self, ip):
         check = IP(ip)
@@ -83,7 +80,6 @@ class generate():
         await self.gen(AMlines)
 
 try:
-    #threads = sys.argv[1]
     linesA = int(sys.argv[1])
 except:
     print("\x1b[96mUsage\x1b[97m:\x1b[95m python3 {}\x1b[95m [\x1b[96mthreads\x1b[95m] [\x1b[96mno. of IPs\x1b[95m] [\x1b[96mfileName\x1b[95m]\x1b[97m".format(sys.argv[0]))
